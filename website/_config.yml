@@ -2,9 +2,9 @@
 title: DevOps Hamburg
 email: xmcpam@gmail.com
 url: https://cudos.github.io
-description: "Best site ever"
+description: "Die Seite kostet fast gar nichts!"
 keywords: "DevOps, AWS, Google Cloud, Cloud, Development, Operations, Java, Python"
-skills: "IT Professional - Cloud Expert - Code Guru"
+skills: "Security Champion - Cloud Expert - Coding Guru"
 meta_author: Herbert Karajan
 
 # Google webmaster tools
@@ -52,8 +52,8 @@ social:
 
 # Postal address (add as many lines as necessary)
 address:
-  - line: 3481 Melrose Place
-  - line: Beverly Hills, CA 90210
+  - line: Rönneburger Str. 53a
+  - line: 21079 Hamburg
 
 # Credits content
 #credits: 'Freelancer is a free to use, open source Bootstrap theme created by <a href="http://startbootstrap.com">Start Bootstrap</a>.'

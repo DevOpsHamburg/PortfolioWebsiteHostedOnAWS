@@ -1,0 +1,26 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Description: ACM Certificate for Organization Website
+
+Parameters:
+  HostedZone:
+    Type: String
+    Description: The DNS name of an existing Amazon Route 53 hosted zone
+    AllowedPattern: (?!-)[a-zA-Z0-9-.]{1,63}(?<!-)
+    ConstraintDescription: must be a valid DNS zone name.
+
+Resources:
+  WebsiteCertificate:
+    Type: AWS::CertificateManager::Certificate
+    Properties:
+      DomainName: !Join ['', ['*', '.', !Ref 'HostedZone']]
+      DomainValidationOptions:
+        - DomainName: !Ref 'HostedZone'
+          ValidationDomain: !Ref 'HostedZone'
+      SubjectAlternativeNames:
+        - !Ref 'HostedZone'
+      ValidationMethod: 'DNS'
+
+Outputs:
+  CertificateArn:
+    Value: !Ref 'WebsiteCertificate'
+    Description: ARN of ACM Certificate
